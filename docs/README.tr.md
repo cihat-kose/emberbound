@@ -6,7 +6,7 @@ Oyun kuralları terminal arayüzünden ayrıdır. Proje Java/backend portföyü 
 
 ## Proje kökeni
 
-Emberbound, Patika.dev üzerinden verilen bir Java konsol macerası ödeviyle başladı; ilk konsept ve gereksinimler bu çalışmadan geldi. Bu repository, o başlangıcın kapsamlı biçimde genişletilmiş ve yeniden yapılandırılmış hâlidir; mevcut portföy değeri mimari, uygulama, kayıt doğrulama, otomatik testler, build araçları ve CI çalışmasındadır. Repository geçmişinde erken dönem Java macera prototipi ve tarihsel Patika proje referansları görülür; ancak resmi egzersiz URL'si veya ayrı bir üçüncü taraf lisans bildirimi bulunmaz.
+Emberbound, ilk konsept ve gereksinimleri sağlayan Patika.dev Java konsol macerası ödevinden başladı. Bu repository, o başlangıcın kapsamlı biçimde genişletilmiş ve yeniden yapılandırılmış hâlidir; sonraki çalışma mimari, uygulama, kayıt doğrulama, otomatik testler, build araçları, dokümantasyon ve CI çalışmalarını içerir.
 
 ## Çalıştırma
 

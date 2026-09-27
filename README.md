@@ -16,7 +16,7 @@ Built with **Java 21**, with a UI-independent rules engine, validated save files
 
 ## Project origin
 
-Emberbound originated from a Java console adventure assignment from Patika.dev, which provided the initial concept and requirements. This repository is a substantially extended and re-engineered version of that starting point, documenting the subsequent architecture, implementation, persistence validation, automated testing, build tooling and CI work. The repository history contains the early `JavaAdventureGame` prototype and historical `JavaPatikaProjects` references, but no official exercise URL or separate third-party license notice.
+Emberbound originated from a Patika.dev Java console adventure assignment, which provided the initial concept and requirements. This repository is a substantially extended and re-engineered version of that starting point, documenting the subsequent architecture, implementation, persistence validation, automated testing, build tooling, documentation and CI work.
 
 ## Play
 

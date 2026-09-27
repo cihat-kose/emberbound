@@ -4,7 +4,7 @@ Position this as a finished Java application with a playable domain and visible 
 
 ## Project origin
 
-Emberbound began as a Java console adventure assignment from Patika.dev. The assignment supplied the initial concept and requirements; this repository is the substantially extended and re-engineered version that demonstrates the subsequent architecture, implementation, persistence validation, automated testing, build tooling and CI work. The repository history supports the early Java adventure prototype and historical Patika project references, but does not contain an official exercise URL or separate third-party license notice.
+Emberbound began as a Java console adventure assignment from Patika.dev. The assignment supplied the initial concept and requirements; this repository is the substantially extended and re-engineered version that demonstrates the subsequent architecture, implementation, persistence validation, automated testing, build tooling, documentation and CI work. Repository history also records the early Java adventure prototype and historical Patika project references, while the exact exercise source and separate third-party licensing details remain unspecified.
 
 ## Repository description
 
@@ -18,11 +18,11 @@ The game is **Emberbound**, the repository and artifact use `emberbound`, and th
 
 **English**
 
-> Built Emberbound, a complete turn-based survival game in Java 21. Separated combat and progression rules from the terminal interface, implemented versioned saves with defensive validation and safe file replacement, and added automated regression tests, coverage checks and Windows/Linux CI configuration.
+> Developed and substantially extended Emberbound, a Java 21 turn-based survival project originating from a Patika.dev learning exercise. Separated combat and progression rules from the terminal interface, implemented versioned saves with defensive validation and safe file replacement, and added automated regression tests, coverage checks and Windows/Linux CI.
 
 **Türkçe**
 
-> Java 21 ile oynanabilir bir sıra tabanlı hayatta kalma oyunu geliştirdim. Savaş ve ilerleme kurallarını terminal arayüzünden ayırdım; sürümlü kayıt, veri doğrulama ve güvenli dosya yazma ekledim. Hata senaryolarını ve oyun akışını otomatik testlerle doğrulayıp kapsam kontrolü ve Windows/Linux CI yapılandırması hazırladım.
+> Patika.dev’deki bir Java eğitim projesinden başlayan Emberbound’ı kapsamlı biçimde geliştirip Java 21 tabanlı, test ve CI ile doğrulanan bir portfolio projesine dönüştürdüm. Savaş ve ilerleme kurallarını terminal arayüzünden ayırdım; sürümlü kayıt, veri doğrulama, güvenli dosya yazma, otomatik testler, coverage kontrolleri ve Windows/Linux CI ekledim.
 
 Use only the parts you can explain and defend in a technical conversation. Add the current test count or coverage percentage only after running `verify` and checking its report; those figures can change with the code.
 
