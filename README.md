@@ -1,90 +1,124 @@
-# Currently under development...
+# Emberbound
 
-# Java Adventure Game
+![Emberbound — three supplies, one signal fire, a way home](docs/assets/emberbound.svg)
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![Platform](https://img.shields.io/badge/platform-JVM-blue?style=for-the-badge)
-![License](https://img.shields.io/github/license/cihat-kose/java-adventure-game?style=for-the-badge&cacheSeconds=60)
-![Last Commit](https://img.shields.io/github/last-commit/cihat-kose/java-adventure-game?style=for-the-badge)
+[![CI Tests](https://img.shields.io/github/actions/workflow/status/cihat-kose/java-adventure-game/ci.yml?branch=master&style=for-the-badge&label=CI%20Tests&logo=github)](https://github.com/cihat-kose/java-adventure-game/actions/workflows/ci.yml)
+[![Java 21](https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/projects/jdk/21/)
+[![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/)
+[![JUnit 5](https://img.shields.io/badge/JUnit%205-25A162?style=for-the-badge&logo=junit5&logoColor=white)](https://docs.junit.org/5.13.4/user-guide/)
+[![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-## 📖 Introduction
+A complete, turn-based survival adventure for the terminal. Explore a fog-bound island, survive its inhabitants, and gather **Food, Firewood and Water**. Bring them back to the Safe House to light a signal fire and escape.
 
-Welcome to **java-adventure-game**, a text-based adventure game currently under development. Built with Java, this game immerses players in a world filled with thrilling battles, quests, and choices. Prepare to face fierce enemies, gather resources, and explore multiple locations as you fight to survive and thrive.
+Built with **Java 21**, with a UI-independent rules engine, validated save files, and automated tests. The console is the first playable interface; the game rules can be reused by a future web application.
 
-## 🎮 Gameplay Overview
+[Play](#play) · [Game guide](docs/GAMEPLAY.md) · [Architecture](docs/ARCHITECTURE.md) · [Türkçe](docs/README.tr.md)
 
-In this adventure, players will navigate through various locations, encounter obstacles, and collect valuable items. The choices you make will determine your fate in this adventure world. Will you survive the wilderness?
+## Play
 
-## 🦸 Characters
+Install **JDK 21 or newer** and point `JAVA_HOME` to it. Maven is downloaded automatically by the included [Maven Wrapper](https://maven.apache.org/tools/wrapper/). The first build needs internet access; the packaged game runs offline.
 
-![Characters](images/characters.png)
+```sh
+git clone https://github.com/cihat-kose/java-adventure-game.git emberbound
+cd emberbound
+```
 
-Choose from a roster of unique characters, each with their strengths and skills to help you tackle obstacles and navigate through the game’s challenges.
+**Windows — PowerShell or Command Prompt**
 
-## 👾 Obstacles
+```powershell
+.\play.cmd
+```
 
-![Obstacles](images/obstacles.png)
+**macOS / Linux**
 
-Encounter a range of foes with unique traits and difficulties. Be prepared to engage in combat, as each location presents different challenges.
+```sh
+sh ./play.sh
+```
 
-## 🗡️ Weapons
+The launchers build the game and use the JDK in `JAVA_HOME`. They do not run the test suite; use `verify` below before contributing.
 
-![Weapons](images/weapons.png)
+**Just want to see it?** Add `--demo` to either launcher. It plays a complete expedition through the real game, with visible inputs and no save-file access:
 
-Equip yourself with a variety of weapons to enhance your combat abilities:
-- **Pistol**
-- **Sword**
-- **Rifle**
+```text
+  --- YOU ESCAPED ---
+  Food for the crossing. Water for the journey. Firewood for a signal.
+  A sail appears beyond the fog. Ada, you are going home.
+  Enemies defeated: 6 | Supplies: 3/3 | Gold: 46
+```
 
-## 🛡️ Armors
+Already built? Run `java -jar target/emberbound.jar` with Java 21+. Run `java -version` if you see `UnsupportedClassVersionError`; the launchers avoid a mismatched Java on your PATH when `JAVA_HOME` is set.
 
-![Armors](images/armors.png)
+## The expedition
 
-Protect yourself with armors ranging from **Light** to **Heavy**, each providing different levels of protection in battle:
-- **Light Armor**
-- **Medium Armor**
-- **Heavy Armor**
+| Place | What you will find |
+| --- | --- |
+| Safe House | Free healing; escape when all three supplies are collected |
+| Tool Store | Three weapon upgrades, three armor upgrades, and healing bandages |
+| Cave | 1–3 zombies guarding **Food** |
+| Forest | 1–3 vampires guarding **Firewood** |
+| River | 1–3 bears guarding **Water** |
 
-## 🗺️ Locations
+Choose Samurai, Archer, or Knight. Attack first, anticipate the counterattack, and retreat when the odds turn against you. Defeated enemies stay defeated; cleared regions cannot be farmed. Every class can finish the game using the starting resources and earned gold.
 
-Explore diverse locations, each offering different features, items, and foes to face:
+The journal tracks objectives. Save from the map, save and quit, or preserve a completed expedition at the ending. There is **no autosave**; a defeat leaves your previous checkpoint available.
 
-- **Safe House**
-  - **Feature**: Restores player health completely.
+```sh
+java -jar target/emberbound.jar --seed 7
+java -jar target/emberbound.jar --save .saves/second-expedition.properties
+java -jar target/emberbound.jar --demo
+java -jar target/emberbound.jar --help
+```
 
-- **Cave**
-  - **Obstacle**: Zombies (1-3)
-  - **Feature**: Combat encounters with a chance to loot.
-  - **Item**: Food
+The default slot is `.saves/expedition.properties`, relative to the working directory. A new save replaces that slot; use `--save` for separate expeditions. The launchers use the repository directory.
 
-- **Forest**
-  - **Obstacle**: Vampires (1-3)
-  - **Feature**: Combat encounters with a chance to loot.
-  - **Item**: Firewood
+## Engineering
 
-- **River**
-  - **Obstacle**: Bears (1-3)
-  - **Feature**: Combat encounters with a chance to loot.
-  - **Item**: Water
+| Concern | Implementation |
+| --- | --- |
+| Rules independent of presentation | Domain objects and the combat state machine contain no console or filesystem code |
+| Reproducibility | Seeded populations are generated once and preserved across saves and retreats |
+| Defensive state transitions | Health bounds, one-time rewards, equipment upgrades, explicit victory and defeat |
+| Persistence | Versioned UTF-8 text, bounded reads, full validation before loading, temporary-file replacement |
+| Input handling | A single line reader, retries for invalid input, graceful EOF at every prompt |
+| Verification | JUnit 5 scenarios, 300 seeded campaign runs, JaCoCo coverage gate, Spotless formatting |
+| Delivery | Executable JAR; GitHub Actions configured for Java 21 on Windows and Linux |
 
-- **Toolstore**
-  - **Feature**: Purchase items to aid in your journey.
-  - **Weapons Available**: Pistol, Sword, Rifle
-  - **Armors Available**: Light, Medium, Heavy
+Read the [architecture and tradeoffs](docs/ARCHITECTURE.md), including the path to a future frontend. This is a single-player Java application; it currently has no HTTP API, database, or browser client.
 
-## 🚧 Development Status
+## Build and verify
 
-The game is currently in development, with more features and improvements to come. Stay tuned for updates on new locations, items, and gameplay elements.
+```powershell
+# Windows
+.\mvnw.cmd verify
+.\mvnw.cmd spotless:apply
+```
 
-## 🤝 Contributing
+```sh
+# macOS / Linux
+sh ./mvnw verify
+sh ./mvnw spotless:apply
+```
 
-Contributions are welcome! If you're interested in contributing, please follow these steps:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Create a Pull Request.
+`verify` compiles with warnings treated as errors, runs tests, checks formatting, builds `target/emberbound.jar`, and enforces **at least 80% line coverage**. The readable coverage report is at `target/site/jacoco/index.html`; test results are in `target/surefire-reports/`.
 
-## 📜 License
+Tests cover combat ordering, retreat, death, victory, purchase failures, corrupted saves, failed file replacement, input recovery, save/resume, and the complete console demo. Campaign tests exercise all three characters over 100 seeds each.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+The CI workflow uploads the executable, demo transcript, and reports after a successful run. Its badge reflects published workflow runs, not local verification.
+
+## Project layout
+
+```text
+src/main/java/dev/emberbound/
+  Main.java           Entry point and command-line options
+  domain/             Characters, equipment, player and expedition state
+  engine/             Combat actions, outcomes and state transitions
+  cli/                Terminal navigation, presentation and demo
+  persistence/        Save boundary and validated file implementation
+src/test/java/dev/emberbound/
+docs/                 Gameplay, architecture and portfolio notes
+.github/workflows/    Cross-platform verification
+```
+
+The original character, enemy, weapon and armor statistics are retained. The initial prototype has been completed and reorganized around the Emberbound game identity; the existing repository URL is unchanged.
+
+Contributions: [CONTRIBUTING.md](CONTRIBUTING.md). Project presentation: [portfolio notes](docs/PORTFOLIO.md). Licensed under [MIT](LICENSE).
