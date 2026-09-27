@@ -15,6 +15,12 @@
             <url>https://opensource.org/license/mit</url>
         </license>
     </licenses>
+    <developers>
+        <developer>
+            <name>Cihat Köse</name>
+            <id>cihat-kose</id>
+        </developer>
+    </developers>
     <properties>
         <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
