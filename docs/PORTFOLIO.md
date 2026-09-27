@@ -8,7 +8,7 @@ Position this as a finished Java application with a playable domain and visible 
 
 Suggested GitHub topics: `java`, `java21`, `game`, `cli`, `oop`, `junit5`, `maven`, `software-design`.
 
-The game's name and artifact are **Emberbound**, and the package root is `dev.emberbound`. The repository currently retains its original `java-adventure-game` URL. If renamed on GitHub later, update repository links and the CI badge in README and `pom.xml` together.
+The game is **Emberbound**, the repository and artifact use `emberbound`, and the package root is `dev.emberbound`. Use [cihat-kose/emberbound](https://github.com/cihat-kose/emberbound) in portfolio and CV links.
 
 ## Project summary for a CV or portfolio
 

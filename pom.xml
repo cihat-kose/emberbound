@@ -8,7 +8,7 @@
     <version>1.0.0</version>
     <name>Emberbound</name>
     <description>A complete, turn-based survival adventure built with Java 21.</description>
-    <url>https://github.com/cihat-kose/java-adventure-game</url>
+    <url>https://github.com/cihat-kose/emberbound</url>
     <licenses>
         <license>
             <name>MIT License</name>
