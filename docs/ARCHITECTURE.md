@@ -69,7 +69,7 @@ Saving writes to a temporary file in the destination directory, closes the write
 
 `mvnw verify` runs JUnit tests, checks the Java format, builds the executable JAR, generates a JaCoCo report and enforces an 80% overall line-coverage floor. Compiler warnings fail the build. Tests target failure boundaries and observable behavior: damage ordering, rewards, no-op healing, purchase atomicity, invalid saves, write failures, input recovery and complete campaigns.
 
-The Maven Wrapper fixes Maven at 3.9.11. Java and test/build plugin versions are declared in `pom.xml`. The JAR has a fixed build timestamp for reproducible archive entries. CI is configured for Windows and Linux with JDK 21; published runs upload both game and verification artifacts.
+The Maven Wrapper fixes Maven at 3.9.16. Java and test/build plugin versions are declared in `pom.xml`. The JAR has a fixed build timestamp for reproducible archive entries. CI is configured for Windows and Linux with JDK 21; published runs upload both game and verification artifacts.
 
 ## A future web edition
 

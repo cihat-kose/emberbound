@@ -5,7 +5,7 @@
 [![CI Tests](https://img.shields.io/github/actions/workflow/status/cihat-kose/emberbound/ci.yml?branch=master&style=for-the-badge&label=CI%20Tests&logo=github)](https://github.com/cihat-kose/emberbound/actions/workflows/ci.yml)
 [![Java 21](https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/projects/jdk/21/)
 [![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/)
-[![JUnit 5](https://img.shields.io/badge/JUnit%205-25A162?style=for-the-badge&logo=junit5&logoColor=white)](https://docs.junit.org/5.13.4/user-guide/)
+[![JUnit 6](https://img.shields.io/badge/JUnit%206-25A162?style=for-the-badge)](https://docs.junit.org/6.1.3/overview.html)
 [![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 A complete, turn-based survival adventure for the terminal. Explore a fog-bound island, survive its inhabitants, and gather **Food, Firewood and Water**. Bring them back to the Safe House to light a signal fire and escape.
@@ -80,7 +80,7 @@ The default slot is `.saves/expedition.properties`, relative to the working dire
 | Defensive state transitions | Health bounds, one-time rewards, equipment upgrades, explicit victory and defeat |
 | Persistence | Versioned UTF-8 text, bounded reads, full validation before loading, temporary-file replacement |
 | Input handling | A single line reader, retries for invalid input, graceful EOF at every prompt |
-| Verification | JUnit 5 scenarios, 300 seeded campaign runs, JaCoCo coverage gate, Spotless formatting |
+| Verification | JUnit 6 scenarios, 300 seeded campaign runs, JaCoCo coverage gate, Spotless formatting |
 | Delivery | Executable JAR; GitHub Actions configured for Java 21 on Windows and Linux |
 
 Read the [architecture and tradeoffs](docs/ARCHITECTURE.md), including the path to a future frontend. This is a single-player Java application; it currently has no HTTP API, database, or browser client.

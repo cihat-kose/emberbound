@@ -6,7 +6,7 @@ Position this as a finished Java application with a playable domain and visible 
 
 > A turn-based survival adventure in Java 21. UI-independent game rules, deterministic combat, validated saves, JUnit tests and cross-platform CI. Playable in the terminal.
 
-Suggested GitHub topics: `java`, `java21`, `game`, `cli`, `oop`, `junit5`, `maven`, `software-design`.
+Suggested GitHub topics: `java`, `java21`, `game`, `cli`, `oop`, `junit6`, `maven`, `software-design`.
 
 The game is **Emberbound**, the repository and artifact use `emberbound`, and the package root is `dev.emberbound`. Use [cihat-kose/emberbound](https://github.com/cihat-kose/emberbound) in portfolio and CV links.
 
