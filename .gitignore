@@ -29,3 +29,9 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Maven / game saves ###
+target/
+.saves/
+*.class
+*.log

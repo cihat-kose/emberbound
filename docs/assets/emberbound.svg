@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">Emberbound</title>
+  <desc id="desc">A terminal survival adventure. An island map connects the Cave, Forest and River to the signal fire at the Safe House.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101e2a"/>
+      <stop offset="1" stop-color="#0b141c"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#efad5b" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#efad5b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#59707f" stroke-opacity=".09"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="400" rx="18" fill="url(#background)"/>
+  <rect width="1200" height="400" rx="18" fill="url(#grid)"/>
+  <rect x=".5" y=".5" width="1199" height="399" rx="18" fill="none" stroke="#34434e"/>
+  <circle cx="925" cy="218" r="200" fill="url(#glow)"/>
+  <path d="M65 90 C50 71 76 57 71 38 C92 53 100 69 89 84 C91 70 82 66 80 65 C82 82 70 82 74 93 Z" fill="#f4b45f"/>
+  <text x="111" y="66" fill="#9aabb7" font-family="Consolas, monospace" font-size="13" letter-spacing="3">JAVA 21 / CONSOLE EDITION</text>
+  <text x="61" y="171" fill="#f1eee5" font-family="Segoe UI, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="-2">Emberbound</text>
+  <text x="65" y="217" fill="#b2c1cb" font-family="Segoe UI, Arial, sans-serif" font-size="21">Three supplies. One signal fire. A way home.</text>
+  <path d="M65 251 H505" stroke="#354653"/>
+  <g font-family="Consolas, monospace" font-size="12" letter-spacing="1.7">
+    <text x="65" y="283" fill="#f4b45f">EXPLORE</text>
+    <text x="171" y="283" fill="#627786">/</text>
+    <text x="195" y="283" fill="#f4b45f">SURVIVE</text>
+    <text x="301" y="283" fill="#627786">/</text>
+    <text x="325" y="283" fill="#f4b45f">FIND YOUR WAY HOME</text>
+  </g>
+  <text x="65" y="355" fill="#8496a3" font-family="Consolas, monospace" font-size="13">$ java -jar emberbound.jar --demo</text>
+  <path d="M819 57 L946 43 L1048 100 L1106 196 L1055 295 L937 353 L802 324 L719 240 L737 130 Z" fill="#162a30" fill-opacity=".6" stroke="#3c5b60" stroke-width="1.5"/>
+  <path d="M830 77 L942 65 L1025 116 L1081 195 L1037 277 L931 332 L815 303 L743 235 L759 142 Z" fill="none" stroke="#29464d" stroke-dasharray="3 7"/>
+  <path d="M797 147 Q889 117 965 104 M797 147 Q808 241 914 255 M965 104 Q1009 162 1030 219 M1030 219 Q995 252 914 255" fill="none" stroke="#88b5a5" stroke-width="1.5" stroke-dasharray="5 7" opacity=".8"/>
+  <g font-family="Consolas, monospace" font-size="12" text-anchor="middle">
+    <circle cx="797" cy="147" r="6" fill="#88b5a5"/>
+    <text x="797" y="129" fill="#c2d2cc">CAVE</text>
+    <text x="797" y="173" fill="#8ba69c" font-size="10">FOOD</text>
+    <circle cx="965" cy="104" r="6" fill="#88b5a5"/>
+    <text x="965" y="86" fill="#c2d2cc">FOREST</text>
+    <text x="965" y="130" fill="#8ba69c" font-size="10">FIREWOOD</text>
+    <circle cx="1030" cy="219" r="6" fill="#88b5a5"/>
+    <text x="1030" y="201" fill="#c2d2cc">RIVER</text>
+    <text x="1030" y="245" fill="#8ba69c" font-size="10">WATER</text>
+    <circle cx="914" cy="255" r="20" fill="#f4b45f" fill-opacity=".1" stroke="#b88750"/>
+    <path d="M906 265 C895 251 916 245 911 233 C931 248 928 259 920 266 C923 255 916 252 915 250 C917 262 909 260 912 268 Z" fill="#f4b45f"/>
+    <text x="914" y="298" fill="#f4b45f" letter-spacing="1">SAFE HOUSE</text>
+    <text x="914" y="316" fill="#a79274" font-size="10">LIGHT THE SIGNAL</text>
+  </g>
+</svg>
