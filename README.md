@@ -2,7 +2,7 @@
 
 ![Emberbound — three supplies, one signal fire, a way home](docs/assets/emberbound.svg)
 
-[![CI Tests](https://img.shields.io/github/actions/workflow/status/cihat-kose/java-adventure-game/ci.yml?branch=master&style=for-the-badge&label=CI%20Tests&logo=github)](https://github.com/cihat-kose/java-adventure-game/actions/workflows/ci.yml)
+[![CI Tests](https://img.shields.io/github/actions/workflow/status/cihat-kose/emberbound/ci.yml?branch=master&style=for-the-badge&label=CI%20Tests&logo=github)](https://github.com/cihat-kose/emberbound/actions/workflows/ci.yml)
 [![Java 21](https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/projects/jdk/21/)
 [![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/)
 [![JUnit 5](https://img.shields.io/badge/JUnit%205-25A162?style=for-the-badge&logo=junit5&logoColor=white)](https://docs.junit.org/5.13.4/user-guide/)
@@ -19,7 +19,7 @@ Built with **Java 21**, with a UI-independent rules engine, validated save files
 Install **JDK 21 or newer** and point `JAVA_HOME` to it. Maven is downloaded automatically by the included [Maven Wrapper](https://maven.apache.org/tools/wrapper/). The first build needs internet access; the packaged game runs offline.
 
 ```sh
-git clone https://github.com/cihat-kose/java-adventure-game.git emberbound
+git clone https://github.com/cihat-kose/emberbound.git
 cd emberbound
 ```
 
@@ -119,6 +119,6 @@ docs/                 Gameplay, architecture and portfolio notes
 .github/workflows/    Cross-platform verification
 ```
 
-The original character, enemy, weapon and armor statistics are retained. The initial prototype has been completed and reorganized around the Emberbound game identity; the existing repository URL is unchanged.
+Emberbound completes the original Java adventure prototype while retaining its character, enemy, weapon and armor statistics.
 
 Contributions: [CONTRIBUTING.md](CONTRIBUTING.md). Project presentation: [portfolio notes](docs/PORTFOLIO.md). Licensed under [MIT](LICENSE).
