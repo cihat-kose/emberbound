@@ -14,6 +14,10 @@ Built with **Java 21**, with a UI-independent rules engine, validated save files
 
 [Play](#play) · [Game guide](docs/GAMEPLAY.md) · [Architecture](docs/ARCHITECTURE.md) · [Türkçe](docs/README.tr.md)
 
+## Project origin
+
+Emberbound originated from a Java console adventure assignment from Patika.dev, which provided the initial concept and requirements. This repository is a substantially extended and re-engineered version of that starting point, documenting the subsequent architecture, implementation, persistence validation, automated testing, build tooling and CI work. The repository history contains the early `JavaAdventureGame` prototype and historical `JavaPatikaProjects` references, but no official exercise URL or separate third-party license notice.
+
 ## Play
 
 Install **JDK 21 or newer** and point `JAVA_HOME` to it. Maven is downloaded automatically by the included [Maven Wrapper](https://maven.apache.org/tools/wrapper/). The first build needs internet access; the packaged game runs offline.
@@ -119,6 +123,6 @@ docs/                 Gameplay, architecture and portfolio notes
 .github/workflows/    Cross-platform verification
 ```
 
-Emberbound completes the original Java adventure prototype while retaining its character, enemy, weapon and armor statistics.
+Emberbound builds on the original Java adventure prototype while retaining its character, enemy, weapon and armor statistics.
 
 Contributions: [CONTRIBUTING.md](CONTRIBUTING.md). Project presentation: [portfolio notes](docs/PORTFOLIO.md). Licensed under [MIT](LICENSE).

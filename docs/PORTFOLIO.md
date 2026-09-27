@@ -2,6 +2,10 @@
 
 Position this as a finished Java application with a playable domain and visible engineering decisions. Lead with what someone can run, then show how the code makes the behavior dependable.
 
+## Project origin
+
+Emberbound began as a Java console adventure assignment from Patika.dev. The assignment supplied the initial concept and requirements; this repository is the substantially extended and re-engineered version that demonstrates the subsequent architecture, implementation, persistence validation, automated testing, build tooling and CI work. The repository history supports the early Java adventure prototype and historical Patika project references, but does not contain an official exercise URL or separate third-party license notice.
+
 ## Repository description
 
 > A turn-based survival adventure in Java 21. UI-independent game rules, deterministic combat, validated saves, JUnit tests and cross-platform CI. Playable in the terminal.

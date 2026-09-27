@@ -4,6 +4,10 @@ Emberbound, Java 21 ile geliştirilmiş, terminalde oynanan tamamlanmış bir s�
 
 Oyun kuralları terminal arayüzünden ayrıdır. Proje Java/backend portföyü için; durum yönetimi, doğrulama, hata senaryoları, test edilebilirlik ve tekrarlanabilir derlemeyi gösterir. Henüz web arayüzü veya HTTP API içermez.
 
+## Proje kökeni
+
+Emberbound, Patika.dev üzerinden verilen bir Java konsol macerası ödeviyle başladı; ilk konsept ve gereksinimler bu çalışmadan geldi. Bu repository, o başlangıcın kapsamlı biçimde genişletilmiş ve yeniden yapılandırılmış hâlidir; mevcut portföy değeri mimari, uygulama, kayıt doğrulama, otomatik testler, build araçları ve CI çalışmasındadır. Repository geçmişinde erken dönem Java macera prototipi ve tarihsel Patika proje referansları görülür; ancak resmi egzersiz URL'si veya ayrı bir üçüncü taraf lisans bildirimi bulunmaz.
+
 ## Çalıştırma
 
 JDK 21 veya daha yeni bir JDK kurulu olmalı. `JAVA_HOME` değişkenini JDK klasörüne yönlendir. Maven Wrapper gerekli Maven sürümünü indirir; ilk derlemede internet gerekir.
